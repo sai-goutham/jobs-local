@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet" href="{% static 'css/custom_styles_2.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container" align='center'>
+      <div class="jumbotron">
+        <h1>This is sample response</h1>
+        {% if emp_list %}
+        <table>
+          <thead> 
+            <th>Emp no</th>
+            <th>Emp name</th>
+            <th>Emp sal</th>
+            <th>Emp addr</th>
+          </thead>
+          {% for emp in emp_list %}
+          <tr>
+            <td>{{emp.eno}}</td>
+            <td>{{emp.ename}}</td>
+            <td>{{emp.esal}}</td>
+            <td>{{emp.eaddr}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+{% else %}
+<p>no record</p>
+{% endif %}
+
+      </div>
+</div>
+  </body>
+</html>
