@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="stylesheet" href="{% static 'css/jobs.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+        <h1>Free Job alert in Pune</h1>
+        <img src="{% static "images/pune1.jpg"%}" alt="">
+        <img src="{% static "images/pune2.jpg"%}" alt="">
+        {% if jobs1_list %}
+        <table>
+          <thead>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Eligibility</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>phoneNumber</th>
+          </thead>
+          {% for job in jobs1_list %}
+          <tr>
+            <td>{{job.date}}</td>
+            <td>{{job.company}}</td>
+            <td>{{job.title}}</td>
+            <td>{{job.eligibility}}</td>
+            <td>{{job.address}}</td>
+            <td>{{job.email}}</td>
+            <td>{{job.phonenumber}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+{% else %}
+<p>no record</p>
+{% endif %}
+  </body>
+</html>

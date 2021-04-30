@@ -1,0 +1,12 @@
+.container .jumbotron {
+  margin-top: 300px;
+  background-color: pink;
+  font-family: sans-serif;
+  color: blue;
+}
+
+body{
+  background: url(https://images.unsplash.com/photo-1613663294172-4c14b96dc23b?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fDZzTVZqVExTa2VRfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
